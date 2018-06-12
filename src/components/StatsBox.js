@@ -6,16 +6,16 @@ const StatsBox = () => {
   return (
     <View style={styles.container}>
       <View style={{flexDirection: 'row', justifyContent: 'space-between', borderBottomColor: '#e0e0e0', borderBottomWidth: 1}}>
-        <Text style={styles.heading}>Goal</Text>
-        <Text style={styles.goalText}>Lose weight</Text>
+        <Text style={styles.label}>Goal</Text>
+        <Text style={styles.label}>Lose weight</Text>
       </View>
       <View style={{flexDirection: 'row', justifyContent: 'space-between', borderBottomColor: '#e0e0e0', borderBottomWidth: 1}}>
-        <Text style={styles.heading}>Age</Text>
-        <Text style={styles.goalText}>24</Text>
+        <Text style={styles.label}>Age</Text>
+        <Text style={styles.label}>24</Text>
       </View>
       <View style={{flexDirection: 'row', justifyContent: 'space-between', borderBottomColor: '#e0e0e0', borderBottomWidth: 1}}>
-        <Text style={styles.heading}>Height</Text>
-        <Text style={styles.goalText}>167cm</Text>
+        <Text style={styles.label}>Height</Text>
+        <Text style={styles.label}>167cm</Text>
       </View>
     </View>
   );
@@ -23,7 +23,6 @@ const StatsBox = () => {
 
 const styles = StyleSheet.create({
   container: {
-    position: 'relative',
     backgroundColor: '#fff',
     width: 287,
     height: 150,
@@ -33,20 +32,11 @@ const styles = StyleSheet.create({
     shadowRadius: 5,
     shadowColor: '#ddd',
     shadowOffset: { height: 2, width: 2 },
-    justifyContent: 'center'
+    justifyContent: 'space-evenly'
   },
 
-  goalText: {
-    fontSize: 16
-  },
-
-  heading: {
-    fontSize: 20,
-    fontWeight: 'bold'
-  },
-
-  arrow: {
-    alignSelf: 'flex-end',
+  label: {
+    fontSize: 12
   }
 });
 

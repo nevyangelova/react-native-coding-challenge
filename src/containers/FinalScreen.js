@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: '30%',
     fontSize: 22,
-    fontFamily: 'FiraSans',
+    fontFamily: 'FiraSans-Bold',
     fontWeight: 'bold'
   },
 

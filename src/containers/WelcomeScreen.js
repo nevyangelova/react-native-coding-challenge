@@ -8,6 +8,8 @@ export default class WelcomeScreen extends React.Component {
   }
 
   render() {
+    const { navigate } = this.props.navigation;
+
     return (
       <ImageBackground source={require('../assets/images/backgroundGrain.png')} style={styles.backgroundImage}>
         <Image source={require('../assets/images/icon8Logo.png')} style={styles.logoImage} />
@@ -17,7 +19,10 @@ export default class WelcomeScreen extends React.Component {
         <Image source={require('../assets/images/imgDumbbell.png')} style={styles.dumbbellImage} />
 
         <View style={styles.container}>
-          <GoalBox />
+          <GoalBox navigateToQuestion={() =>
+            navigate('Form')
+          }
+          />
           <GoalBox />
           <GoalBox />
         </View>

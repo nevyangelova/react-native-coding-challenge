@@ -1,13 +1,15 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, NavigatorIOS } from 'react-native';
 import PropTypes from 'prop-types';
 
-const GoalBox = () => {
+const GoalBox = (navigateToQuestion) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.heading}>Lose weight</Text>
-      <Text style={styles.goalText}>Burn fat & get lean</Text>
-      <Image source={require('../assets/images/chevronRight.png')} style={styles.arrow} />
+      <Button onPress={navigateToQuestion}>
+        <Text style={styles.heading}>Lose weight</Text>
+        <Text style={styles.goalText}>Burn fat & get lean</Text>
+        <Image source={require('../assets/images/chevronRight.png')} style={styles.arrow} />
+      </Button>
     </View>
   );
 };
@@ -46,5 +48,9 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-end',
   }
 });
+
+GoalBox.PropTypes = {
+  navigateToQuestion: proptype.func.isRequired
+}
 
 export default GoalBox;
